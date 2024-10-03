@@ -3,14 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "clean-reports": "powershell -Command \"Remove-Item -Path .\\test-results -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item -Path .\\playwright-report -Recurse -Force -ErrorAction SilentlyContinue\"",
-    "pretest": "npm run clean-reports",
-    "test:chrome:headed": "npm run pretest && npx playwright test --project chrome --headed",
-    "test:chrome:headless": "npm run pretest && npx playwright test --project chrome",
-    "test:firefox:headed": "npm run pretest && npx playwright test --project firefox --headed",
-    "test:firefox:headless": "npm run pretest && npx playwright test --project firefox",
-    "test:webkit:headed": "npm run pretest && npx playwright test --project webkit --headed",
-    "test:webkit:headless": "npm run pretest && npx playwright test --project webkit"
+    "test:chrome:headed": "npx playwright test --project chrome --headed",
+    "test:chrome:headless": "npx playwright test --project chrome",
+    "test:firefox:headed": "npx playwright test --project firefox --headed",
+    "test:firefox:headless": "npx playwright test --project firefox",
+    "test:webkit:headed": "npx playwright test --project webkit --headed",
+    "test:webkit:headless": "npx playwright test --project webkit"
   },
   "keywords": [],
   "author": "",

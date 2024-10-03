@@ -4,12 +4,13 @@
   "main": "index.js",
   "scripts": {
     "clean-reports": "powershell -Command \"Remove-Item -Path .\\test-results -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item -Path .\\playwright-report -Recurse -Force -ErrorAction SilentlyContinue\"",
-    "test:chrome:headed": "npm run clean-reports && npx playwright test --project chrome --headed",
-    "test:chrome:headless": "npm run clean-reports && npx playwright test --project chrome",
-    "test:firefox:headed": "npm run clean-reports && npx playwright test --project firefox --headed",
-    "test:firefox:headless": "npm run clean-reports && npx playwright test --project firefox",
-    "test:webkit:headed": "npm run clean-reports && npx playwright test --project webkit --headed",
-    "test:webkit:headless": "npm run clean-reports && npx playwright test --project webkit"
+    "pretest": "npm run clean-reports",
+    "test:chrome:headed": "npm run pretest && npx playwright test --project chrome --headed",
+    "test:chrome:headless": "npm run pretest && npx playwright test --project chrome",
+    "test:firefox:headed": "npm run pretest && npx playwright test --project firefox --headed",
+    "test:firefox:headless": "npm run pretest && npx playwright test --project firefox",
+    "test:webkit:headed": "npm run pretest && npx playwright test --project webkit --headed",
+    "test:webkit:headless": "npm run pretest && npx playwright test --project webkit"
   },
   "keywords": [],
   "author": "",

@@ -17,7 +17,12 @@ Steps To install dependencies of project
   ```bash
   2. Execute: npm i
   ```
-
+  ```bash
+  3. Execute: npx playwright install
+  ```
+  ```bash
+  4. Execute: npm update
+  ```
   ## Commands to execute test 
 
 To run  test files in chrome in headed mode

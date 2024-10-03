@@ -1,0 +1,23 @@
+{
+  "name": "client-task-playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "clean-reports": "powershell -Command \"Remove-Item -Path .\\test-results -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item -Path .\\playwright-report -Recurse -Force -ErrorAction SilentlyContinue\"",
+    "test:chrome:headed": "npm run clean-reports && playwright test --project chrome --headed",
+    "test:chrome:headless": "npm run clean-reports && npx playwright test --project chrome",
+    "test:firefox:headed": "npm run clean-reports && npx playwright test --project firefox --headed",
+    "test:firefox:headless": "npm run clean-reports && npx playwright test --project firefox",
+    "test:webkit:headed": "npm run clean-reports && npx playwright test --project webkit --headed",
+    "test:webkit:headless": "npm run clean-reports && npx playwright test --project webkit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@faker-js/faker": "^9.0.3",
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.7.4"
+  }
+}
